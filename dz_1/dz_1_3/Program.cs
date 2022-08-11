@@ -27,7 +27,7 @@ else
 Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'E' затем 'ENTER'");
 string? decision = Console.ReadLine();
 
-if (decision.ToLower() == "e")
+if (decision?.ToLower() == "e")
 {
     repeat = false;
 }
