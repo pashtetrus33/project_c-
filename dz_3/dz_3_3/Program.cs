@@ -17,13 +17,10 @@ while (count < number)
     Console.Write($"{Math.Pow(count,3)}, ");
     count++;
 }
-Console.Write($"{Math.Pow(count,3)}");
-Console.WriteLine();
-Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'E' затем 'ENTER'");
+Console.WriteLine($"{Math.Pow(count,3)}");
+Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
 string? decision = Console.ReadLine();
 
-if (decision?.ToLower() == "e")
-{
+if (decision?.ToLower() == "q")
     repeat = false;
-}
 }
