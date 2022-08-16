@@ -1,20 +1,32 @@
 ﻿Console.Clear();
-Console.Write("Введите многозначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int temp = 10;
-bool isTrue = true;
-while( number > 0)
+
+int arrayLength = 8;
+int[] createArray()
 {
-    if(temp < number % 10)
-    {
-        isTrue = false;
-    }
-    temp = number % 10;
-    number /= 10;
+int [] randomArray = new int[arrayLength];
+for (int i = 0; i < arrayLength; i++)
+randomArray[i] = new Random().Next(0,2);
+return randomArray;
 }
-if(isTrue)
-Console.WriteLine("Число упорядоченное!");
-else
-Console.WriteLine("Число неупорядоченное!");
+
+void printArray(int[] array)
+{
+for (int i = 0; i < arrayLength; i++)
+ Console.Write($"{array[i]} ");
+ Console.WriteLine();
+}
+
+printArray(createArray());
+
+
+
+
+
+
+
+
+
+
+
 
 

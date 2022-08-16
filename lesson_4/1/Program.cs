@@ -1,28 +1,25 @@
 ﻿Console.Clear();
-Console.Write("Введите номер четверти: ");
-int quaterNumber = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число А: ");
+int numA = Convert.ToInt32(Console.ReadLine());
 
-if ((quaterNumber < 1) || (quaterNumber > 4))
-{
-    Console.WriteLine("Ввели неправильный номер четверти (от 1 до 4) ");
+Console.Write("Введите число B: ");
+int numB = Convert.ToInt32(Console.ReadLine());
 
-}
+Console.Write("Введите число C: ");
+int numC = Convert.ToInt32(Console.ReadLine());
 
-else if (quaterNumber == 1)
+int sum (int number)
 {
-Console.WriteLine("Диапазон  0 < x < + inf, 0 < y < + inf");
-}
+    int count = 0;
+    int sum = 0;
+    while (count <= number)
+    {
+        sum +=count;
+        count++;
+    }
 
-else if (quaterNumber == 2)
-{
-Console.WriteLine("Диапазон - inf < x < 0, 0 < y < + inf");
+    return sum;
 }
-
-else if (quaterNumber == 3)
-{
-Console.WriteLine("Диапазон - inf < x < 0, - inf < y < 0");
-}
-else
-{
-Console.WriteLine("Диапазон 0 < x < + inf, - inf < y < 0");
-}
+Console.WriteLine($"Cумма чисел от 1 до {numA} равно {sum(numA)}");
+Console.WriteLine($"Cумма чисел от 1 до {numB} равно {sum(numB)}");
+Console.WriteLine($"Cумма чисел от 1 до {numC} равно {sum(numC)}");

@@ -1,15 +1,17 @@
 ﻿Console.Clear();
 Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int count = 1;
+int num = Convert.ToInt32(Console.ReadLine());
 
-while(count <= number)
+int sum (int number)
 {
-Console.Write($"{count*count} ");
-count++;
+    int count = 1;
+    int sum = 1;
+    while (count <= number)
+    {
+        sum *=count;
+        count++;
+    }
+
+    return sum;
 }
-Console.WriteLine();
-
-
-
-
+Console.WriteLine($"Произведение  чисел от 1 до {num} равно {sum(num)}");
