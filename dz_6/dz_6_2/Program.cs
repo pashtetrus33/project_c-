@@ -19,7 +19,7 @@ if ((k1 == 0) && (b1 == 0))
 {
     Console.WriteLine("Вы ввели коэффиценты для точки, а не для прямой, попробуйте снова!");
     Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
-    if (Console.ReadLine().ToLower() == "q")
+    if (Console.ReadLine()?.ToLower() == "q")
     break;
     else
     continue;
@@ -36,7 +36,7 @@ if ((k2 == 0) && (b2 == 0))
     Console.WriteLine("Вы ввели коэффиценты для точки, а не для прямой, попробуйте снова!");
     Console.WriteLine();
     Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
-    if (Console.ReadLine().ToLower() == "q")
+    if (Console.ReadLine()?.ToLower() == "q")
     break;
     else
     continue;
@@ -48,7 +48,7 @@ if ((k1 == 0) && (k2 == 0) && (b1 != b2))
     Console.WriteLine("Прямые - параллельные!");
     Console.WriteLine();
     Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
-    if (Console.ReadLine().ToLower() == "q")
+    if (Console.ReadLine()?.ToLower() == "q")
     break;
     else
     continue;
@@ -59,7 +59,7 @@ if ((k1 == k2) && (b1 == b2))
     Console.WriteLine("Вы ввели одну и ту же прямую!");
     Console.WriteLine();
     Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
-    if (Console.ReadLine().ToLower() == "q")
+    if (Console.ReadLine()?.ToLower() == "q")
     break;
     else
     continue;
