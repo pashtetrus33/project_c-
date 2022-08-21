@@ -15,32 +15,13 @@ Console.Write("Введите k1: ");
 double k1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b1: ");
 double b1 = Convert.ToDouble(Console.ReadLine());
-if ((k1 == 0) && (b1 == 0))
-{
-    Console.WriteLine("Вы ввели коэффиценты для точки, а не для прямой, попробуйте снова!");
-    Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
-    if (Console.ReadLine()?.ToLower() == "q")
-    break;
-    else
-    continue;
-}
+
 Console.WriteLine("Введите коэффициенты для второй прямой:");
 Console.Write("Введите k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 
-//Проверка на то, что вместо прямых ввели точку
-if ((k2 == 0) && (b2 == 0))
-{
-    Console.WriteLine("Вы ввели коэффиценты для точки, а не для прямой, попробуйте снова!");
-    Console.WriteLine();
-    Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
-    if (Console.ReadLine()?.ToLower() == "q")
-    break;
-    else
-    continue;
-}
 
 // Проверка на параллельность прямых
 if ((k1 == 0) && (k2 == 0) && (b1 != b2))
