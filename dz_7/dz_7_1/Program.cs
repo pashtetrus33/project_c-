@@ -18,7 +18,7 @@ double[,] arrayFill(int row, int col, double min, double max)
             else
             {
                 array[i, j] = new Random().Next((int)min, (int)max) + min - (int)min + new Random().NextDouble();
-                if (array[i,j] >= max)
+                if (array[i,j] > max)
                 array[i,j] = max;
             }
 
