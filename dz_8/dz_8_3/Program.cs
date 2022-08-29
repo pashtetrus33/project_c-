@@ -115,4 +115,3 @@ while (repeat)
     if ((decision?.ToLower() == "q") || (decision?.ToLower() == "й"))
         repeat = false;
 }
-
