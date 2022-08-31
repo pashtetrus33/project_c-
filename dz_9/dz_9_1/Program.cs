@@ -5,7 +5,7 @@ M = 1; N = 5. -> ""1, 2, 3, 4, 5""
 M = 4; N = 8. -> ""4, 5, 6, 7, 8"" */
 
 // метод вывода натуральных чисел от М до N
-int[] naturalNum(int m, int n)
+int[] NaturalNum(int m, int n)
 {
     int index = 0;
     int[] array = new int[n - m + 1];
@@ -44,7 +44,7 @@ while (repeat)
 
     Console.WriteLine($"М = {m}");
     Console.WriteLine($"N = {n}");
-    Console.WriteLine($"Натуральные числа от {m} до {n}: {String.Join(" ",naturalNum(m, n))}");
+    Console.WriteLine($"Натуральные числа от {m} до {n}: {String.Join(" ",NaturalNum(m, n))}");
 
     Console.WriteLine("Для продолжения нажмите 'ENTER', для выхода 'Q' затем 'ENTER'");
     string? decision = Console.ReadLine();
