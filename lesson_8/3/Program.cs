@@ -1,7 +1,10 @@
 ﻿Console.Clear();
-int row = 128;
+Console.Write("Введите число выводимых строк треугольника Паскаля: ");
+int row;
+while (!int.TryParse(Console.ReadLine(), out row));
+
 int[,] triangle = new int[row, row];
-const int cellWidth = 1;
+const int cellWidth = 3;
 
 void FillTriangle()
 {
@@ -41,18 +44,16 @@ void Magic()
         for (int j = 0; j <= i; j++)
         {
             Console.SetCursorPosition(col, i + 1);
-            //if (triangle[i, j] != 0) Console.Write($"{triangle[i, j],cellWidth}");
-            if (triangle[i, j] %2 != 0) Console.Write("*");
+            if (triangle[i, j] != 0) Console.Write($"{triangle[i, j],cellWidth}");
+            //if (triangle[i, j] %2 != 0) Console.Write("*");
             col += cellWidth * 2;
         }
         col = cellWidth * row - cellWidth * (i + 1);
         Console.WriteLine();
     }
 }
-//Console.ReadLine();
+
 FillTriangle();
 //PrintTriangle();
-//Console.ReadLine();
 Magic();
-Console.WriteLine();
 Console.WriteLine();
