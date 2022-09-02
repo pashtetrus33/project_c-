@@ -69,7 +69,7 @@ int[] FindMinIn2DIntArray(int[,] arr)
             }
         }
     }
-    Console.WriteLine($"Минимальный элемент в массиве равен {min}. Его позиция: строка {result[0]+1} столбец {result[1]+1}");
+    Console.WriteLine($"Минимальный элемент в массиве равен {min}. Его позиция: строка {result[0] + 1} столбец {result[1] + 1}");
     return result;
 }
 
@@ -92,25 +92,29 @@ int[,] DeleteRawCol(int[,] arr, int[] min)
                 result[i, j] = arr[i, j];
         }
     }
-    Console.WriteLine($"Удаляем строку {min[0]+1} и столбцец {min[1]+1}.");
+    Console.WriteLine($"Удаляем строку {min[0] + 1} и столбцец {min[1] + 1}.");
     return result;
 }
 
-//int[,] array = fill2DIntArray(4, 4, 0, 10);
-
-//print2DIntArray(array, "до");
-int row;
-int col;
+int row = 0;
+int col = 0;
 int startValue;
-Console.Write("Введите число строк в массиве: ");
-//проверка на ввод целого числа
-while (!int.TryParse(Console.ReadLine(), out row))
-    Console.Write("Ошибка ввода! Введите целое число!: ");
+while (row <= 0)
+{
+    Console.Write("Введите число строк в массиве (>0): ");
+    //проверка на ввод целого числа
+    while (!int.TryParse(Console.ReadLine(), out row))
+        Console.Write("Ошибка ввода! Введите целое число!: ");
+}
 
-Console.Write("Введите число столбцов в массиве: ");
-//проверка на ввод целого числа
-while (!int.TryParse(Console.ReadLine(), out col))
-    Console.Write("Ошибка ввода! Введите целое число!: ");
+while (col <= 0)
+{
+
+    Console.Write("Введите число столбцов в массиве (>0): ");
+    //проверка на ввод целого числа
+    while (!int.TryParse(Console.ReadLine(), out col))
+        Console.Write("Ошибка ввода! Введите целое число!: ");
+}
 
 Console.Write("Введите начальное (минимальное) число массива: ");
 //проверка на ввод целого числа
