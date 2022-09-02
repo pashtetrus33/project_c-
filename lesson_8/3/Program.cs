@@ -23,7 +23,7 @@ void FillTriangle()
     }
 }
 
-void PrintTriangle()
+/* void PrintTriangle()
 {
     for (int i = 0; i < row; i++)
     {
@@ -34,7 +34,7 @@ void PrintTriangle()
         }
         Console.WriteLine();
     }
-}
+} */
 
 void Magic()
 {
